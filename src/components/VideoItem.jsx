@@ -2,22 +2,19 @@ import React from 'react';
 import './VideoItem.css';
 
 // function component
-const VideoItem = ({video, onSelectVideo}) => {
+const VideoItem = ({ video, onSelectVideo }) => {
   return (
-    <div className="m-2 video-item list-group-item" onClick={() => onSelectVideo(video)}>
-      <div className="row">
-        <div>
-          <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title}/>
-        </div>
-        <div className="ml-2">
-          <h6 className="card-title">
-            {video.snippet.title}
-          </h6>
-          <p>Published by: {video.snippet.channelTitle}</p>
-        </div>
-      </div>
+    <div
+      className='m-2 video-item list-group-item'
+      onClick={() => onSelectVideo(video)}
+    >
+      <img className="float-left mr-2"
+        src={video.snippet.thumbnails.default.url}
+        alt={video.snippet.title}
+      />
+      <h6 className="card-title">{video.snippet.title}</h6>
     </div>
-  )
+  );
 };
 
 export default VideoItem;
