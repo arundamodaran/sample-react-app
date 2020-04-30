@@ -12,6 +12,10 @@ class App extends Component {
     selectedVideo: null,
   };
 
+  componentDidMount() {
+    this.handleSearchSumbit('web development');
+  }
+
   handleSearchSumbit = async (searchString) => {
     const result = await youtube.get('/search', {
       params: {
