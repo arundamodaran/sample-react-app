@@ -1,0 +1,10 @@
+.video-item {
+  cursor: pointer;
+}
+
+.video-item img{
+  max-width: 180px;
+}
+.video-item p {
+  font-size: 12px;
+}

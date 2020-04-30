@@ -8,7 +8,7 @@ const VideoList = (props) => {
   })
   
   return (
-    <div>
+    <div className="list-group list-group-flush">
       {renderedList}
     </div>
   )
